@@ -1,0 +1,17 @@
+<h1>Edit Task</h1>
+
+<button class="btn" action="edit"></button>
+
+<%= link_to "edit this task", "tasks/:id/edit" %>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.number_field :completed %>
+  <%= f.submit %>
+<% end %>
+
+
